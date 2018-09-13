@@ -1,0 +1,25 @@
+{% ckan_extends %}
+
+{% block package_notes %}
+<div style="float:left; margin-right: 25px; margin-bottom: 25px; display: flex; flex-direction: row;">
+    <div style="overflow: auto; text-align: left; margin-right: 25px;">
+        Open Data Certificate:
+    </div>
+</div>
+<div class="clearfix"></div>
+{{ super() }}
+{% endblock %}
+
+{% block package_resources %}
+<div style="float:right; margin-right: 25px;">
+    <div style="margin-bottom: 10px;">
+        <a>
+            <!--<a style="overflow: auto; width: 100%; text-align: left;" href="{% url_for 'export_datapackage_basic_zip', package_id=pkg.name %}"-->
+            <!--class='btn' id='export_datapackage_button_zip'>-->
+            <i class='icon-download'></i>Check for certificate update
+        </a>
+    </div>
+</div>
+<div class="clearfix"></div>
+{{ super() }}
+{% endblock %}
