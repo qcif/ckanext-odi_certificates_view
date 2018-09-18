@@ -32,17 +32,15 @@
 ckanext-odi_certificates_view
 =============
 
-.. Put a description of your extension here:
-   What does it do? What features does it have?
-   Consider including some screenshots or embedding a video!
+A simple view renderer to display odi certificate data (usually stored with ckanext-odi_certificates_store)
 
 
 ------------
 Requirements
 ------------
 
-For example, you might want to mention here which versions of CKAN this
-extension works with.
+Tested against Ckan API 2.7.3
+Recommended to be used with ckanext-odi_certificates_store
 
 
 ------------
