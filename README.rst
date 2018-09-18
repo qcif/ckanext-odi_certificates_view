@@ -39,7 +39,7 @@ A simple view renderer to display odi certificate data (usually stored with ckan
 Requirements
 ------------
 
-Tested against Ckan API 2.7.3
+Tested against: Ckan API 2.7.3
 Recommended to be used with ckanext-odi_certificates_store
 
 
@@ -57,7 +57,7 @@ To install ckanext-odi_certificates_view:
 
      . /usr/lib/ckan/default/bin/activate
 
-2. Install the ckanext-odi_certificates_view Python package into your virtual environment::
+2. Install the ckanext-odi_certificates_view Python package into your virtual environment (pending)::
 
      pip install ckanext-odi_certificates_view
 
