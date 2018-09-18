@@ -3,14 +3,14 @@
 {% block package_notes %}
 <div style="float:left; margin-right: 25px; margin-bottom: 25px; display: flex; flex-direction: row;">
     <div style="overflow: auto; text-align: left; margin-right: 25px;">
-        Open Data Certificate:
+        {{_("Open Data Certificate:")}}
     </div>
     {% set odi_cert_pkg = c.pkg_dict %}
     {% for extra in h.sorted_extras(odi_cert_pkg.extras) %}
         {% set key, value = extra %}
-        {%- if key == 'level' -%}
+        {%- if key == 'odi_certificate_level' -%}
           <tr>
-            <td class="dataset-details">{{ value }}</td>
+            <td class="dataset-details">{{ value.capitalize() }}</td>
           </tr>
         {%- endif %}
     {% endfor %}
