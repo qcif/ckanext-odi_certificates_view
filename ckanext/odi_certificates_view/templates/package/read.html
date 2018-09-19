@@ -1,20 +1,17 @@
 {% ckan_extends %}
 
 {% block package_notes %}
-<div style="float:left; margin-right: 25px; margin-bottom: 25px; display: flex; flex-direction: row;">
-    <div style="overflow: auto; text-align: left; margin-right: 25px;">
-        {{_("Open Data Certificate:")}}
-    </div>
-    {% set odi_cert_pkg = c.pkg_dict %}
-    {% for extra in h.sorted_extras(odi_cert_pkg.extras) %}
-        {% set key, value = extra %}
-        {%- if key == 'odi_certificate_level' -%}
-          <tr>
-            <td class="dataset-details">{{ value.capitalize() }}</td>
-          </tr>
-        {%- endif %}
-    {% endfor %}
-</div>
-<div class="clearfix"></div>
-{{ super() }}
+    {% set odi_certificate_level = h.get_pkg_dict_extra(c.pkg_dict, 'odi_certificate_level') %}
+        <div style="float:left; margin-right: 25px; margin-bottom: 25px; display: flex; flex-direction: row;">
+            {% if odi_certificate_level %}
+                <div style="overflow: auto; text-align: left; margin-right: 25px;">
+                    {{_("Open Data Certificate:")}}
+                </div>
+                <tr>
+                    <td class="dataset-details">{{ odi_certificate_level.capitalize() }}</td>
+                </tr>
+            {% endif %}
+        </div>
+    <div class="clearfix"></div>
+    {{ super() }}
 {% endblock %}
